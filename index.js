@@ -1,7 +1,11 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-	if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
+const readline = require("readline")
 
-	return `${input} & ${postfix}`
-}
+module.exports = (prompt) => new Promise((resolve) => {
+	const rl = readline.createInterface(process.stdin, process.stdout)
+	rl.question(prompt, (answer) => {
+		resolve(answer)
+		rl.close()
+	})
+})

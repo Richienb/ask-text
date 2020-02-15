@@ -1,41 +1,32 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Ask text [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/ask-text/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/ask-text)
 
-My awesome module.
+Ask the user for a text input.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/ask-text.png)](https://npmjs.com/package/ask-text)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install ask-text
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const askText = require("ask-text");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+	const input = await askText("What do you like? ")
+	console.log(`I like ${input} too!`)
+})()
 ```
 
 ## API
 
-### theModule(input, options?)
+### askText(prompt)
 
-#### input
+#### prompt
 
 Type: `string`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The text to prompt the user with.

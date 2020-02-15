@@ -1,14 +1,16 @@
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Ask the user for a text input.
+ * @param prompt The text to prompt the user with.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const askText = require("ask-text");
+ *
+ * (async () => {
+ * 	const input = await askText("What do you like? ")
+ * 	console.log(`I like ${input} too!`)
+ * })()
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function askText(prompt: string): Promise<string>
 
-export = theModule;
+export = askText

@@ -1,14 +1,16 @@
 {
-	"name": "the-module",
+	"name": "ask-text",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Ask the user for a text input.",
+	"repository": "https://github.com/Richienb/ask-text.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
+	"browser": "browser.js",
 	"files": [
 		"index.js",
-		"index.d.ts"
+		"index.d.ts",
+		"browser.js"
 	],
 	"engines": {
 		"node": ">=10"
@@ -17,7 +19,15 @@
 		"lint": "xo",
 		"test": "yarn lint && ava"
 	},
-	"keywords": [],
+	"keywords": [
+		"ask",
+		"text",
+		"input",
+		"check",
+		"user",
+		"cli",
+		"client"
+	],
 	"dependencies": {},
 	"devDependencies": {
 		"ava": "^3.3.0",
@@ -28,6 +38,9 @@
 		"eslint": "^6.8.0"
 	},
 	"xo": {
-		"extends": "richienb/node"
+		"extends": "richienb",
+		"rules": {
+			"no-alert": 0
+		}
 	}
 }
